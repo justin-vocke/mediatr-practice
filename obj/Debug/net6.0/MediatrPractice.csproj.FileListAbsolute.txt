@@ -59,3 +59,6 @@ C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\obj\Debug\net
 C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\obj\Debug\net6.0\MediatrPractice.pdb
 C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\obj\Debug\net6.0\MediatrPractice.genruntimeconfig.cache
 C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\obj\Debug\net6.0\ref\MediatrPractice.dll
+C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\bin\Debug\net6.0\MediatR.dll
+C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Justin Vocke\source\repos\MediatrPractice\MediatrPractice\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
