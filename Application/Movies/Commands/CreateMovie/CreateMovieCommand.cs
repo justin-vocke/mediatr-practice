@@ -7,10 +7,10 @@ namespace MediatrPractice.Application.Movies.Commands.CreateMovie
     public class CreateMovieCommand : IRequest<CreateMovieDto>
     {
         public CreateMovieCommand(
-            string title,
-            string description,
-            MovieGenre genre,
-            int rating)
+            string? title,
+            string? description,
+            MovieGenre? genre,
+            int? rating)
         {
             Title = title;
             Description = description;

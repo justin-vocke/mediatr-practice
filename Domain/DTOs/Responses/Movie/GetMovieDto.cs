@@ -1,9 +1,10 @@
 ﻿using MediatrPractice.Core.Enums;
 
-namespace MediatrPractice.Domain.DTOs.Requests.Movie
+namespace MediatrPractice.Domain.DTOs.Responses.Movie
 {
-    public class CreateMovieRequest
+    public class GetMovieDto
     {
+        public long Id { get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }
         public MovieGenre? Genre { get; set; }
