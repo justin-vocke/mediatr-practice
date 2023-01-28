@@ -1,10 +1,12 @@
 ﻿using MediatR;
+using MediatrPractice.Application.Movies.Queries.GetMovies;
 using MediatrPractice.Domain.DTOs.Responses.Movie;
 using MediatrPractice.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 
-namespace MediatrPractice.Application.Movies.Queries.GetMovie
+namespace MediatrPractice.Application.Movies.Querie.GetMovie
 {
-    public class GetMovieQueryHandler : IRequestHandler<GetMoviesQuery, IList<GetMovieDto>>
+    public class GetMovieQueryHandler : IRequestHandler<GetMovieQuery, GetMovieDto>
     {
         private readonly ApplicationDbContext _dbContext;
 
@@ -12,10 +14,18 @@ namespace MediatrPractice.Application.Movies.Queries.GetMovie
         {
             _dbContext = dbContext;
         }
-    
-        public Task<IList<GetMovieDto>> Handle(GetMoviesQuery request, CancellationToken cancellationToken)
+
+        public async Task<GetMovieDto> Handle(GetMovieQuery request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var movie = await _dbContext.Movies.Where(x => x.Id == request.Id).FirstOrDefaultAsync();
+
+            if (movie != null)
+            {
+                var movieItem = movie.MapTo();
+                return movieItem;
+            }
+            return null;
         }
+
     }
 }
